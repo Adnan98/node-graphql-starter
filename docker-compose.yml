@@ -1,0 +1,27 @@
+version: "3"
+services:
+  database:
+    image: postgres
+    networks:
+      - webnet
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+      POSTGRES_DB: DATABASE
+  redis:
+    image: redis
+    networks:
+      - webnet
+  web:
+    image: "example"
+    ports:
+      - "8080:4000"
+    networks:
+      - webnet
+    environment:
+      DB_HOST: database
+      REDIS_HOST: redis
+    depends_on:
+      - database
+networks:
+  webnet:

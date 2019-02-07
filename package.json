@@ -1,0 +1,42 @@
+{
+  "name": "your application name",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node ./dist",
+    "build": "babel src -d dist",
+    "start": "nodemon --exec babel-node ./src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "nodemon": "^1.18.9",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-transform-spread": "^7.2.2"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.3.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "graphql": "^14.0.2",
+    "graphql-redis-subscriptions": "^2.0.0",
+    "graphql-subscriptions": "^1.0.0",
+    "graphql-tag": "^2.10.1",
+    "graphql-tools": "^4.0.3",
+    "jsonwebtoken": "^8.4.0",
+    "lodash": "^4.17.11",
+    "merge-graphql-schemas": "^1.5.8",
+    "pg": "^7.8.0",
+    "sequelize": "^4.42.0",
+    "subscriptions-transport-ws": "^0.9.15"
+  }
+}
